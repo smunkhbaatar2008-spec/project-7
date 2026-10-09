@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.traffig-light-words {
+  color: white;
+  width: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+.traffic {
+  width: 10%;
+  height: 60%;
+  border: 1px black solid;
+  background: linear-gradient(110deg, #303743, #1e242d 40%, #252c36);
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+.traffic-light {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.red {
+  border: 3px rgb(189, 8, 8) solid;
+  filter: drop-shadow(0 0 5px red) drop-shadow(0 0 5px red);
+}
+.yellow {
+  border: 3px rgb(190, 190, 8) solid;
+  filter: drop-shadow(0 0 5px yellow) drop-shadow(0 0 5px yellow);
+}
+.green {
+  border: 3px rgb(10, 126, 10) solid;
+  filter: drop-shadow(0 0 5px green) drop-shadow(0 0 5px green);
+}
+.human {
+  mask: url("./human-clean.png") center / contain no-repeat;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: human-animation 3s linear infinite;
+}
+.red-human {
+  background-color: red;
+  position: absolute;
+  top: 278%;
+}
+.yellow-human {
+  background-color: yellow;
+  top: 165%;
+}
+.green-human {
+  background-color: green;
+}
+@keyframes human-animation {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -550%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
